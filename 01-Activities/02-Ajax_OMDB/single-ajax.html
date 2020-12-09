@@ -10,15 +10,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
-    var title = "space+jam";
+    var title = "the+hangover";
     var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-      console.log(response.Runtime);
+    $.ajax({                            // First part of function says use that URL to 'get' the query
+      url: queryURL,                      // This is a 2-part ajax call, first part retrieves values of the API call so it can be used 
+      method: "GET"           // <- "This URL, I want you to get this method"
+    }).then(function(response) {        // Then part of the function is a method that calls this 2nd part of the function after the API has been retrieved
+      console.log(response);              // Calling the response, then console logging it 
+      console.log(response.Runtime);      // Calling the response's runtime to print it to the console 
     });
 // ---------------------------------------------------------
 
