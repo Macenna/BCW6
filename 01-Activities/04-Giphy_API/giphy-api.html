@@ -10,8 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // Example queryURL for Giphy API
-    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
-
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";    // This is just the trending tab, there are different API links for each tab
+                // There are 50 gifs that we can put into an array & flip through them  
     $.ajax({
       url: queryURL,
       method: "GET"
