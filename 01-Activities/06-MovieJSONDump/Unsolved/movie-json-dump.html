@@ -30,7 +30,7 @@
 
         // Preventing the submit button from trying to submit the form
         // We're optionally using a form so the user may hit Enter to search instead of clicking the button
-        event.preventDefault();
+        event.preventDefault();         // Makes sure the button doesn't click automatically 
 
         // Here we grab the text from the input box
         var movie = $("#movie-input").val();
@@ -40,7 +40,13 @@
 
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
         // and display it in the div with an id of movie-view
-
+        $.$.ajax({
+          type: "GET",
+          url: "queryURL",
+          success: function (response) {
+            $("#movie-input").text(JSON.stringify(response));
+          }
+        });
         // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
 
         // =================================================================
