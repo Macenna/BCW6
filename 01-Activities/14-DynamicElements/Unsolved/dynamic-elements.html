@@ -17,7 +17,7 @@
     $("button").on("click", function() {
       var animal = $(this).attr("data-animal");
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+        animal + "&api_key=qOs5FRE3Ca9qQfYyYFZaGlDO4S5XEmmR&limit=10";
 
       $.ajax({
         url: queryURL,
@@ -25,14 +25,21 @@
       }).then(function(response) {
         // Step 1: Run this file, click a button, and see what the response object looks like in the browser's console.
         // Open up the data key, then open up the 0th, element. Study the keys and how the JSON is structured.
-
+        console.log(queryURL);
         console.log(response);
+
+        var results = response.data;
+
+       
 
         // Step 2: since the image information is inside of the data key,
         // make a variable named results and set it equal to response.data
 
         // =============== put step 2 in between these dashes ==================
-
+        for (var i = 0; index < array.length; index++) {
+          const element = array[index];
+          
+        }
         // ========================
 
         // for (var i = 0; i < results.length; i++) {
